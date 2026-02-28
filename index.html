@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mayra ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.seccion{
+    display:none;
+    text-align:center;
+    animation: aparecer 1s ease forwards;
+    width:90%;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+#login{
+    display:block;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+    background:#ff4d6d;
+    color:white;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes aparecer{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.mensaje{
+    font-size:18px;
+    color:white;
+    margin-top:20px;
+    line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="seccion">
+    <h2>Ingresa la contraseña 💕</h2>
+    <input type="password" id="password" placeholder="Contraseña">
+    <br>
+    <button onclick="verificar()">Entrar</button>
+</div>
+
+<!-- MENÚ -->
+<div id="menu" class="seccion">
+    <h2>Para ti, amor ✨</h2>
+    <button onclick="irA('principal')">Mensaje Principal ❤️</button>
+    <button onclick="irA('motivacion')">Motivación 💪</button>
+    <button onclick="irA('aprobacion')">Aprobación 🌟</button>
+</div>
+
+<!-- MENSAJE PRINCIPAL -->
+<div id="principal" class="seccion">
+    <div class="mensaje">
+Miraaaa amor, hice una página 😂 buenísimo, ¿cierto?  
+En fin… quería serte sincero.
+
+La verdad uno nunca sabe completamente qué pasa por la mente de otra persona, incluso cuando esa persona lo dice. Pero me gustaría, aunque sea un poquito, entender la tuya.
+
+A veces cargas con mucho, y lo sé. Estos días no han sido fáciles para ti. Conozco el proceso, y aunque pase el tiempo, lo que vivimos siempre va a doler un poco. Nuestro bebé… fue algo muy difícil, y ese dolor no se borra. Pero quiero que sepas que no estás sola en eso. Si algún día la vida nos da otra oportunidad, quiero que estemos fuertes para recibirla.
+
+Perdóname si a veces no sé cómo actuar. Perdón si alguna vez te he hecho sentir sola. Muchas noches me siento culpable, siento que no te merezco, pero aquí estoy, intentando ser mejor, intentando demostrarte que quiero hacerte feliz.
+
+Contigo me siento completo. No siento soledad a tu lado. Y me duele pensar que tú a veces sí puedas sentirla conmigo. Haré todo lo posible para que eso cambie.
+
+Quiero esforzarme por ti, porque eres mi vida. Te amo tanto. Y nadie me va a quitar eso de la mente y del corazón. Tengo claro quién es la mujer de mi vida, la que quiero que me regañe cuando estemos viejitos.
+
+Te amo, Mayra Valentina.  
+Y esta página tiene cosas muy bonitas… quiero que entres cada vez que te sientas mal, y recuerdes lo feliz que te ves y lo que siento por ti 🫶🏽
+    </div>
+    <button onclick="volver()">Volver</button>
+</div>
+
+<!-- MOTIVACIÓN -->
+<div id="motivacion" class="seccion">
+    <div class="mensaje">
+Amor, sé que la universidad no está siendo fácil. Sé que a veces sientes que no eres buena estudiando, que te cuesta más que a otros. Pero eso no define tu inteligencia ni tu valor.
+
+Estás pasando por momentos difíciles, emocionalmente fuertes, y aun así sigues levantándote todos los días. Eso habla más de tu fuerza que cualquier nota.
+
+Lo que vivimos fue duro. Lo del bebé dejó una marca profunda, y sanar toma tiempo. No te exijas estar bien todo el tiempo. Permítete sentir, pero no olvides que eres más fuerte de lo que crees.
+
+Y como lashista… amor, tienes un talento increíble. No es solo poner pestañas, es hacer que otras mujeres se sientan hermosas. Tienes manos talentosas y un futuro enorme ahí. Cree más en ti. Yo creo en ti todos los días.
+
+Vas a lograr cosas grandes. No porque todo sea fácil, sino porque tú no te rindes.
+    </div>
+    <button onclick="volver()">Volver</button>
+</div>
+
+<!-- APROBACIÓN -->
+<div id="aprobacion" class="seccion">
+    <div class="mensaje">
+Te amo, Mayra.  
+Amo tus ojos.  
+Me fascinas todos los días.  
+Eres hermosa cada día que pasa.
+
+Tus ojos me los tatuaría si pudiera.  
+Tu sonrisa ilumina todo.  
+Tu forma de ser me enamora constantemente.
+
+Eres suficiente.  
+Eres valiosa.  
+Eres increíble.
+
+Y te amo más de lo que las palabras pueden explicar 🌟
+    </div>
+    <button onclick="volver()">Volver</button>
+</div>
+
+<script>
+
+function verificar(){
+    const pass = document.getElementById("password").value;
+    if(pass === "croqueta"){
+        mostrar("menu");
+    } else {
+        alert("Contraseña incorrecta 😢");
+    }
+}
+
+function mostrar(id){
+    document.querySelectorAll(".seccion").forEach(sec => sec.style.display="none");
+    document.getElementById(id).style.display="block";
+}
+
+function irA(id){
+    mostrar(id);
+}
+
+function volver(){
+    mostrar("menu");
+}
+
+</script>
+
+</body>
+</html>
